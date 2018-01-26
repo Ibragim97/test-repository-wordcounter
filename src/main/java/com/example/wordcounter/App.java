@@ -8,6 +8,12 @@ public class App
     }
     
     public static int wordcount(String s) {
-        return 0;
+   		String[] parts = s.split(" ");
+		int cnt = 0;
+	
+		for(int i = 0; i < parts.length; i++)
+			cnt += (parts[i].length() > 0 ? 1 : 0);
+		
+		return cnt;
     }
 }
